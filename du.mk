@@ -1,5 +1,5 @@
 ## Specify phone tech before including full_phone
-$(call inherit-product, vendor/carbon/config/common_gsm.mk)
+$(call inherit-product, vendor/du/config/gsm.mk)
 
 # Boot animation
 TARGET_SCREEN_HEIGHT := 1280
@@ -9,7 +9,7 @@ TARGET_SCREEN_WIDTH := 768
 $(call inherit-product, $(SRC_TARGET_DIR)/product/telephony.mk)
 
 # Inherit some common CM stuff.
-$(call inherit-product, vendor/carbon/config/common_phone.mk)
+$(call inherit-product, vendor/du/config/common.mk)
 
 # Enhanced NFC
 # $(call inherit-product, vendor/cm/config/nfc_enhanced.mk)
@@ -19,10 +19,10 @@ $(call inherit-product, device/lge/geeb/full_geeb.mk)
 
 ## Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := geeb
-PRODUCT_NAME := carbon_geeb
+PRODUCT_NAME := du_geeb
 PRODUCT_BRAND := LGE
 PRODUCT_MODEL := LG-GEEB
 PRODUCT_MANUFACTURER := LGE
 
-PRODUCT_BUILD_PROP_OVERRIDES += BUILD_FINGERPRINT=google/occam/GEEB_CA:4.2.2/JDQ39/573038:user/release-keys PRIVATE_BUILD_DESC="ERRMYGERDITWOKS"
+PRODUCT_BUILD_PROP_OVERRIDES += BUILD_FINGERPRINT=google/occam/GEEB_CA:4.4.2/JDQ39/573038:user/release-keys PRIVATE_BUILD_DESC="ERRMYGERDITWOKS"
 
